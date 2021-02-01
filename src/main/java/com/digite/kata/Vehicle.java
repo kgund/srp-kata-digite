@@ -7,11 +7,6 @@ public class Vehicle {
 
     public Vehicle(final int maxFuel) {
         this.maxFuel = maxFuel;
-        remainingFuel = maxFuel;
-    }
-
-    public void reFuel(){
-        remainingFuel = maxFuel;
     }
 
     public int getMaxFuel() {
