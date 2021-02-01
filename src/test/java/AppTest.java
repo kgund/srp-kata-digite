@@ -18,7 +18,7 @@ public class AppTest {
     }
 
     @Test
-    public void testRefuelCar() {
+    public void testRefuelCarWithinCapacity() {
 
         PetrolPump pump = new PetrolPump();
         pump.refuelVehicle(vehicle, 5);
