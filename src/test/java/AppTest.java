@@ -26,6 +26,14 @@ public class AppTest {
     }
 
     @Test
+    public void testFuelReducesOnAcceleration(){
+        PetrolPump pump = new PetrolPump();
+        pump.refuelVehicle(vehicle, 5);
+        vehicle.accelerate();
+        Assertions.assertEquals(4, vehicle.getRemainingFuel());
+    }
+
+    @Test
     public void testRefuelCarWithExcessFuel() {
 
         PetrolPump pump = new PetrolPump();
@@ -34,4 +42,5 @@ public class AppTest {
         pump.refuelVehicle(vehicle, 10);
         Assertions.assertEquals(10, vehicle.getRemainingFuel());
     }
+
 }
