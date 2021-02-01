@@ -1,3 +1,5 @@
+package com.digite.kata;
+
 import com.digite.kata.Vehicle;
 
 public class PetrolPump {
