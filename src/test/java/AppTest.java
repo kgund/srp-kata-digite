@@ -16,4 +16,22 @@ public class AppTest {
     public void testCapacity() {
         Assertions.assertEquals(10, vehicle.getMaxFuel());
     }
+
+    @Test
+    public void testRefuelCar() {
+
+        PetrolPump pump = new PetrolPump();
+        pump.refuelVehicle(vehicle, 5);
+        Assertions.assertEquals(5, vehicle.getRemainingFuel());
+    }
+
+    @Test
+    public void testRefuelCarWithExcessFuel() {
+
+        PetrolPump pump = new PetrolPump();
+        pump.refuelVehicle(vehicle, 5);
+        vehicle.accelerate();
+        pump.refuelVehicle(vehicle, 10);
+        Assertions.assertEquals(10, vehicle.getRemainingFuel());
+    }
 }
